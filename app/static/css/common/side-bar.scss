@@ -2,4 +2,9 @@
   flex: 0 1 15%;
   height: 100%;
   background: linear-gradient(0deg, #513C80 0, #513C80 0, #269AFF 81%);
+
+  &__inner{
+    padding: 60px 40px 20px 40px;
+
+  }
 }

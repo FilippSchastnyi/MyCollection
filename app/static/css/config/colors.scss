@@ -1,5 +1,23 @@
 // Colors
-$color-primary: #00b763;
-$color-secondary: #FD5800;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-dark: #042133;
+$color-primary: #2CA9F8;
+$color-secondary: #FFFFFF;
+$color-error: #FF2055;
 
-$color-error: red;
+// Gray
+$color-gray: #F3F4F6;
+$color-gray-100: #363C4E;
+$color-gray-80: #7C8292;
+$color-gray-60: #C7CBD6;
+$color-gray-40: #DFE3EC;
+$color-gray-20: #F2F4F8;
+$color-gray-10: #F6F9FF;
+
+
+// Blue
+$color-blue-100: #1FB6F0;
+$color-blue-80: lighten(#1fb6f0, 20%);
+$color-blue-70: lighten(#1FB6F0, 30%);
+$color-blue-50: #2CA9F8;

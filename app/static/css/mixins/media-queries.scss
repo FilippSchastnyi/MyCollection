@@ -35,6 +35,12 @@
   }
 }
 
+@mixin smallTablet-and-mobile() {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
 @mixin no-mobile {
   @media (min-width: $mobileMedia + 1) {
     @content;
