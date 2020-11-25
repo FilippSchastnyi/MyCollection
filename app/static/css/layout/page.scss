@@ -2,15 +2,21 @@
   display: flex;
   justify-content: center;
 
+  &__wrapper {
+    display: flex;
+    flex: 1 1 100%;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex: 1 1 70%;
     min-height: 100vh;
   }
 
   &__header {
     position: relative;
+    padding-top: 60px;
   }
 
   &__content {

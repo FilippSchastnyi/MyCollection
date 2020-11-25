@@ -1,0 +1,27 @@
+.header-menu {
+  display: flex;
+  justify-content: flex-end;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item{
+    margin-left: 10px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+
+  &__link{
+    display: block;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    border-radius: 15px;
+    &:hover{
+      background-color: rgba(44, 169, 248, 0.3);
+    }
+  }
+}
