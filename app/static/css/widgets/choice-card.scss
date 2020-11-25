@@ -1,0 +1,53 @@
+.choice-card {
+  flex: 1 1 100%;
+  background: $color-white;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  overflow: hidden;
+
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    padding: 16px 16px 16px 20px;
+    transition: all ease 0.5s;
+    color: rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      transition: all ease 0.5s;
+      background: rgba(0, 217, 224, 0.1);
+
+      .choice-card__right {
+        transition: all ease 0.3s;
+        color: $color-white;
+        background-color: rgb(0, 217, 224);
+      }
+    }
+
+    &.active {
+      background: rgba(0, 217, 224, 0.3);
+
+      .choice-card__right {
+        color: $color-white;
+        background-color: rgb(0, 217, 224);
+      }
+    }
+  }
+
+  &__right {
+    position: relative;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    height: 28px;
+    width: 30px;
+  }
+
+  &__number {
+    @include align(true, true);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 120%;
+  }
+}

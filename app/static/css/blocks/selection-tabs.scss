@@ -1,0 +1,50 @@
+.selection-tabs {
+  padding: 90px 0;
+  @include smallTablet-and-mobile{
+    padding: 50px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    @include smallTablet-and-mobile{
+      flex-wrap: wrap;
+    }
+  }
+
+  &__left {
+    flex: 1 1 830px;
+    position: relative;
+    @include smallTablet-and-mobile{
+      margin-top: 30px;
+      order: 2;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__right{
+    z-index: 2;
+    position: relative;
+    flex: 0 1 255px;
+    margin-left: 50px;
+    @include smallTablet-and-mobile{
+      flex: 1 1 100%;
+      margin: 0;
+      order: 1;
+      text-align: center;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    max-width: 255px;
+    position: relative;
+    z-index: 2;
+    min-width: 200px;
+    @include smallTablet-and-mobile{
+      max-width: 100%;
+    }
+  }
+}

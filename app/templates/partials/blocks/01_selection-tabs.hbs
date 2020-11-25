@@ -1,0 +1,61 @@
+<section class="section section--gray section--no-margin selection-tabs">
+  <div class="container">
+    <div class="selection-tabs__wrapper js-tabs-container">
+      <div class="selection-tabs__left">
+        {{>widgets/selection
+          title = "lorem"
+          text = "Lorem ipsum dolor sit amet."
+          select = "option 1"
+          tab = "active"
+        }}
+        {{>widgets/selection
+          title = "Lorem ipsum"
+          text = "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+          select = "option 2"
+        }}
+        {{>widgets/selection
+          title = "Lorem Lorem ipsum ipsum"
+          text = "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet."
+          select = "option 3"
+        }}
+        {{>widgets/selection
+          title = "Lorem"
+          text = "Lorem ipsum dolor sit amet, consectetur aidunt iste laborum minima molestiae molestias neque nostrum porro quas, quisquam repudiandae sed similique sit sunt tempore veniam vitae, voluptatum?"
+          select = "option 4"
+        }}
+        {{>widgets/selection
+          title = "Lorem ipsum"
+          text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dicta fugiat pariatur. Aspernatur, beatae dolorem ea eligendi est et ex incidunt iste laborum minima molestiae molestias neque nostrum porro quas, quisquam repudiandae sed similique sit sunt tempore veniam vitae, voluptatum?"
+          select = "option 5"
+        }}
+      </div>
+      <div class="selection-tabs__right">
+        <div class="selection-tabs__cell">
+          {{#>widgets/choice-card}}
+            {{>widgets/choice-card-option
+              text="option 1"
+              number = "1"
+              tab = "active"
+            }}
+            {{>widgets/choice-card-option
+              text="option 2"
+              number = "2"
+            }}
+            {{>widgets/choice-card-option
+              text="option 3"
+              number = "3"
+            }}
+            {{>widgets/choice-card-option
+              text="option 4"
+              number = "4"
+            }}
+            {{>widgets/choice-card-option
+              text="option 5"
+              number = "5"
+            }}
+          {{/widgets/choice-card}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

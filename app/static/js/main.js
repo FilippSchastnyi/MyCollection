@@ -6,6 +6,7 @@ import './src/utils/preloader';
 
 import './src/widgets/popups';
 import './src/widgets/mobile-menu';
+import './src/widgets/tabs';
 
 import './src/app';
 

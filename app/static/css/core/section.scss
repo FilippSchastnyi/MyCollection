@@ -31,6 +31,9 @@
     @include smallTablet-and-mobile {
       font-size: 30px;
     }
+    &--dark{
+      color: $color-dark;
+    }
   }
 
   &__main-text {
