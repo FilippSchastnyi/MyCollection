@@ -13,7 +13,7 @@ class MobileMenu {
   menuClose() {
     this.$burgerButton.classList.remove('open')
     this.$container.classList.remove('open')
-    document.body.classList.remove('menu-open')
+    document.body.style.overflow = "";
   }
 
   menuOpen(event) {
@@ -24,7 +24,7 @@ class MobileMenu {
     } else {
       this.$burgerButton.classList.add('open')
       this.$container.classList.add('open')
-      document.body.classList.add('menu-open')
+      document.body.style.overflow = "hidden";
     }
   }
 
