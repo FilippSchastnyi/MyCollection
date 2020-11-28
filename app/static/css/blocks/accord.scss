@@ -1,0 +1,30 @@
+.accord {
+  &-option {
+    &__item{
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      width: 100%;
+      text-align: left;
+      position: relative;
+      padding: 20px 80px 20px 0;
+      &:after, &:before{
+        content: "";
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 32px;
+        height: 2px;
+        background-color: $color-dark;
+      }
+      &:before{
+        transform: rotate(90deg);
+      }
+    }
+    &__inner{
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
