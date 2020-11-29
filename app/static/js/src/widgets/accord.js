@@ -19,7 +19,6 @@ class Accord {
       }
       else {
         optionElement.classList.add('open')
-        console.log(optionElement.scrollHeight);
         optionContent.style.height = optionElement.lastElementChild.scrollHeight + "px";
       }
     }
