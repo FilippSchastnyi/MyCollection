@@ -16,6 +16,7 @@
         width: 32px;
         height: 2px;
         background-color: $color-dark;
+        transition: 0.3s all ease;
       }
       &:before{
         transform: rotate(90deg);
@@ -25,6 +26,26 @@
       height: 0;
       opacity: 0;
       visibility: hidden;
+      transition: 0.3s all ease;
+    }
+
+    &.open{
+      .accord-option__inner{
+        height: 50px;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s all ease;
+
+      }
+      .accord-option__item{
+        &:before, &:after{
+          transform: rotate(45deg);
+          transition: 0.3s all ease;
+        }
+        &:after{
+          transform: rotate(-45deg);
+        }
+      }
     }
   }
 }
