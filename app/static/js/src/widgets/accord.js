@@ -14,8 +14,6 @@ class Accord {
       if (optionElement.classList.contains('open')) {
         optionElement.classList.remove('open')
         optionContent.style.height = "0px";
-
-
       }
       else {
         optionElement.classList.add('open')
@@ -30,7 +28,6 @@ class Accord {
     })
   }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.js-accord').forEach(item => {
