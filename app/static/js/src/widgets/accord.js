@@ -1,8 +1,7 @@
 class Accord {
   constructor(nodeElement) {
     this.$container = nodeElement
-    this.$optionItem = this.$container.querySelectorAll('.js-accord-option')
-
+    this.$optionButton = this.$container.querySelectorAll('.js-accord-button')
     this.optionClick = this.optionClick.bind(this)
     this.init()
   }
@@ -27,7 +26,7 @@ class Accord {
   }
 
   init() {
-    this.$optionItem.forEach(item => {
+    this.$optionButton.forEach(item => {
       item.addEventListener('click', this.optionClick)
     })
   }

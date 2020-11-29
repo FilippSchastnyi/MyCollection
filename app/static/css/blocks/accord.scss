@@ -20,8 +20,8 @@
         top: 45%;
         right: 0;
         width: 32px;
-        height: 2px;
-        background-color: $color-dark;
+        height: 4px;
+        background-color: $color-blue-100;
         transition: 0.3s all ease;
         @include mobile {
           top: 50%;
@@ -36,6 +36,7 @@
 
     &__content {
       font-size: 14px;
+      max-width: 1000px;
     }
 
     &__inner {
