@@ -1,14 +1,20 @@
 .accord {
   &-option {
-    &__item{
+    &__item {
+      position: relative;
+      padding: 20px 80px 20px 0;
+      width: 100%;
       font-weight: 600;
       font-size: 24px;
       line-height: 32px;
-      width: 100%;
       text-align: left;
-      position: relative;
-      padding: 20px 80px 20px 0;
-      &:after, &:before{
+      @include mobile {
+        padding: 10px 40px 10px 0;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      &:after, &:before {
         content: "";
         position: absolute;
         top: 45%;
@@ -17,32 +23,42 @@
         height: 2px;
         background-color: $color-dark;
         transition: 0.3s all ease;
+        @include mobile {
+          top: 50%;
+          width: 24px;
+        }
       }
-      &:before{
+
+      &:before {
         transform: rotate(90deg);
       }
     }
-    &__inner{
+
+    &__content {
+      font-size: 14px;
+    }
+
+    &__inner {
       height: 0;
       opacity: 0;
       visibility: hidden;
       transition: 0.3s all ease;
     }
 
-    &.open{
-      .accord-option__inner{
-        height: 44px;
+    &.open {
+      .accord-option__inner {
         opacity: 1;
         visibility: visible;
         transition: 0.3s all ease;
-
       }
-      .accord-option__item{
-        &:before, &:after{
+
+      .accord-option__item {
+        &:before, &:after {
           transform: rotate(45deg);
           transition: 0.3s all ease;
         }
-        &:after{
+
+        &:after {
           transform: rotate(-45deg);
         }
       }

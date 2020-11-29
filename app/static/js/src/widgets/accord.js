@@ -9,9 +9,20 @@ class Accord {
 
   optionClick(e) {
     const optionElement = e.target.closest('.js-accord-option')
+    const optionContent = optionElement.lastElementChild
     if (!optionElement) return
     else {
-      optionElement.classList.toggle('open')
+      if (optionElement.classList.contains('open')) {
+        optionElement.classList.remove('open')
+        optionContent.style.height = "0px";
+
+
+      }
+      else {
+        optionElement.classList.add('open')
+        console.log(optionElement.scrollHeight);
+        optionContent.style.height = optionElement.lastElementChild.scrollHeight + "px";
+      }
     }
   }
 
