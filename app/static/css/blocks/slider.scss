@@ -1,10 +1,27 @@
 .slider {
 
+  &__item{
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+
+    &.active{
+      overflow: visible;
+      opacity: 1;
+      transition: all 0.2s ease;
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: flex-end;
   }
 
+  &__bottom{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .25);
+  }
+
+  //hover active arrows
   &__btn-next, &__btn-prev{
     cursor: pointer;
     &:hover{
@@ -12,15 +29,16 @@
         opacity: 0.8;
           &:before, &:after{
             transform: rotate(40deg);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
           }
         &:after{
           transform: rotate(-40deg);
-          transition: all 0.3s ease;
+          transition: all 0.2s ease;
         }
       }
     }
   }
+//
 
   &__counter {
     flex: 0 1 200px;
