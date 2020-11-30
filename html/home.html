@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/main.css?v=110">
+  <link rel="stylesheet" href="../static/css/main.css?v=1060">
 </head>
 
 <body class="page  ">
@@ -467,89 +467,71 @@
     </ul>
   </div>
 </section>
-<section class="section slider">
+<section class="section slider js-slider">
   <div class="container">
     <div class="slider__inner">
-    <div class="slider__top">
-      <div class="slider__counter">
-        <div class="slider__btn-prev"><i class="slider__arrow"></i></div>
-        <p class="slider__current">03<span class="slider__total">/04</span></p>
-        <div class="slider__btn-next"><i class="slider__arrow slider__arrow--reverse"></i></div>
-      </div>
-    </div>
-    <div class="slider__bottom">
-
-      <div class="slider__item">
-        <div class="slider__img">
-            <picture>
-          
-          
-              <source srcset="../content/images/slider/slide_1.jpg,
-                        ../content/images/slider/slide_1@2x.jpg 2x" type="image/jpeg">
-          
-              <img class="lazy" data-sizes="auto" data-original="../content/images/slider/slide_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-            </picture>
+      <div class="slider__top">
+        <div class="slider__counter">
+          <div class="slider__btn-prev js-button-prev"><i class="slider__arrow"></i></div>
+          <div class="slider__counter-number">
+            <span class="slider__current js-slide-current">01</span><span class="slider__total js-slide-total"></span>
+          </div>
+          <div class="slider__btn-next js-button-next"><i class="slider__arrow slider__arrow--reverse"></i></div>
         </div>
       </div>
-<!--     <div class="slider__item">
-  <div class="slider__img">
-      <picture>
-    
-    
-        <source 
-            srcset="../content/images/slider/slide_2.jpg,
-                  ../content/images/slider/slide_2@2x.jpg 2x"
-           type="image/jpeg" >
-    
-        <img class="lazy"
-             data-sizes="auto"
-             data-original="../content/images/slider/slide_2.jpg"
-             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-             alt="">
-      </picture>
-  </div>
-</div>
+      <div class="slider__bottom">
 
-      <div class="slider__item">
-        <div class="slider__img">
-            <picture>
-          
-          
-              <source 
-                  srcset="../content/images/slider/slide_3.jpg,
-                        ../content/images/slider/slide_3@2x.jpg 2x"
-                 type="image/jpeg" >
-          
-              <img class="lazy"
-                   data-sizes="auto"
-                   data-original="../content/images/slider/slide_3.jpg"
-                   src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                   alt="">
-            </picture>
+        <div class="slider__item js-slide  active ">
+          <div class="slider__img">
+              <picture>
+            
+            
+                <source srcset="../content/images/slider/slide_1.jpg,
+                          ../content/images/slider/slide_1@2x.jpg 2x" type="image/jpeg">
+            
+                <img class="lazy" data-sizes="auto" data-original="../content/images/slider/slide_1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+              </picture>
+          </div>
         </div>
-      </div>
-      <div class="slider__item">
-  <div class="slider__img">
-      <picture>
-    
-    
-        <source 
-            srcset="../content/images/slider/slide_4.jpg,
-                  ../content/images/slider/slide_4@2x.jpg 2x"
-           type="image/jpeg" >
-    
-        <img class="lazy"
-             data-sizes="auto"
-             data-original="../content/images/slider/slide_4.jpg"
-             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-             alt="">
-      </picture>
-  </div>
-</div>
--->
+        <div class="slider__item js-slide ">
+          <div class="slider__img">
+              <picture>
+            
+            
+                <source srcset="../content/images/slider/slide_2.jpg,
+                          ../content/images/slider/slide_2@2x.jpg 2x" type="image/jpeg">
+            
+                <img class="lazy" data-sizes="auto" data-original="../content/images/slider/slide_2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+              </picture>
+          </div>
+        </div>
+        <div class="slider__item js-slide ">
+          <div class="slider__img">
+              <picture>
+            
+            
+                <source srcset="../content/images/slider/slide_3.jpg,
+                          ../content/images/slider/slide_3@2x.jpg 2x" type="image/jpeg">
+            
+                <img class="lazy" data-sizes="auto" data-original="../content/images/slider/slide_3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+              </picture>
+          </div>
+        </div>
+        <div class="slider__item js-slide ">
+          <div class="slider__img">
+              <picture>
+            
+            
+                <source srcset="../content/images/slider/slide_4.jpg,
+                          ../content/images/slider/slide_4@2x.jpg 2x" type="image/jpeg">
+            
+                <img class="lazy" data-sizes="auto" data-original="../content/images/slider/slide_4.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+              </picture>
+          </div>
+        </div>
 
+      </div>
     </div>
-  </div>
   </div>
 </section>
 
@@ -561,7 +543,7 @@
 </div>
 </div>
 
-<script src="../static/js/vendors.js?v=110"></script>
-  <script src="../static/js/main.js?v=110"></script>
+<script src="../static/js/vendors.js?v=1060"></script>
+  <script src="../static/js/main.js?v=1060"></script>
 </body>
 </html>
