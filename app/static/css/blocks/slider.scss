@@ -1,0 +1,94 @@
+.slider {
+
+  &__top {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__btn-next, &__btn-prev{
+    cursor: pointer;
+    &:hover{
+      .slider__arrow{
+        opacity: 0.8;
+          &:before, &:after{
+            transform: rotate(40deg);
+            transition: all 0.3s ease;
+          }
+        &:after{
+          transform: rotate(-40deg);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  &__counter {
+    flex: 0 1 200px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__inner {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  &__current {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  &__total {
+    font-size: 24px;
+    opacity: 0.5;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    padding-top: 56%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: block;
+    height: 3px;
+    width: 24px;
+    background-color: $color-dark;
+    border-radius: 20%;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 3px;
+      transform: rotate(50deg);
+      transform-origin: 0% 20%;
+      background-color: $color-dark;
+      border-radius: 20%;
+      transition: all 0.3s ease;
+    }
+
+    &:after {
+      transform: rotate(-50deg);
+      transform-origin: 0 90%;
+    }
+
+    &--reverse {
+      transform: rotate(180deg);
+    }
+  }
+}
