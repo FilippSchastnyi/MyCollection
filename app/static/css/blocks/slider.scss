@@ -1,14 +1,10 @@
 .slider {
 
-  &__item{
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.2s ease;
+  &__item {
+    display: none;
 
-    &.active{
-      overflow: visible;
-      opacity: 1;
-      transition: all 0.2s ease;
+    &.active {
+      display: block;
     }
   }
 
@@ -17,28 +13,32 @@
     justify-content: flex-end;
   }
 
-  &__bottom{
+  &__bottom {
     box-shadow: 0 4px 30px rgba(0, 0, 0, .25);
   }
 
   //hover active arrows
-  &__btn-next, &__btn-prev{
+  &__btn-next, &__btn-prev {
     cursor: pointer;
-    &:hover{
-      .slider__arrow{
+
+    &:hover {
+      .slider__arrow {
         opacity: 0.8;
-          &:before, &:after{
-            transform: rotate(40deg);
-            transition: all 0.2s ease;
-          }
-        &:after{
+
+        &:before, &:after {
+          transform: rotate(40deg);
+          transition: all 0.2s ease;
+        }
+
+        &:after {
           transform: rotate(-40deg);
           transition: all 0.2s ease;
         }
       }
     }
   }
-//
+
+  //
 
   &__counter {
     flex: 0 1 200px;

@@ -8,6 +8,7 @@ import './src/widgets/popups';
 import './src/widgets/mobile-menu';
 import './src/widgets/tabs';
 import './src/widgets/accord';
+import './src/widgets/slider';
 
 import './src/app';
 
