@@ -67,7 +67,6 @@ class Slider {
 
   slideToShow(slideNumber) {
     for (let i = 0; i < this.$slide.length; i++) {
-      console.log(i)
       this.$slide[i].classList.remove('active')
       if (i === slideNumber) {
         this.$slide[i].classList.add('active')
