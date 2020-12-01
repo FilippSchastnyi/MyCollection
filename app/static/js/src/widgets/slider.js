@@ -6,22 +6,24 @@ class Slider {
     this.$buttonSliderPrev = this.$container.querySelector('.js-button-prev')
     this.$sliderTotal = this.$container.querySelector('.js-slide-total')
     this.$slideCurrent = this.$container.querySelector('.js-slide-current')
-    this.$startSliderNumber = 1
+    this.$startSliderNumber = 0
+    this.$slideCurrent.innerText = '0' + 1
 
     this.onButtonNextClick = this.onButtonNextClick.bind(this)
     this.onButtonPrevClick = this.onButtonPrevClick.bind(this)
+    this.slideToShow = this.slideToShow.bind(this)
 
     this.init()
   }
 
   checkDisableButton() {
-    if (this.$startSliderNumber === 1) {
+    if (this.$startSliderNumber === 0) {
       this.$buttonSliderPrev.classList.add('disabled')
-    } else{
-        this.$buttonSliderPrev.classList.remove('disabled')
-      }
+    } else {
+      this.$buttonSliderPrev.classList.remove('disabled')
+    }
 
-    if (this.$startSliderNumber === this.$slide.length) {
+    if (this.$startSliderNumber === this.$slide.length - 1) {
       this.$buttonSliderNext.classList.add('disabled')
     } else {
       this.$buttonSliderNext.classList.remove('disabled')
@@ -38,6 +40,7 @@ class Slider {
   }
 
   insertCurrentNumber(i) {
+    i++;
     if (i < 10) {
       this.$slideCurrent.innerText = '0' + i
     } else {
@@ -46,20 +49,29 @@ class Slider {
   }
 
   onButtonNextClick() {
-    if (this.$startSliderNumber < this.$slide.length) {
+    if (this.$startSliderNumber < 3) {
       this.insertCurrentNumber(++this.$startSliderNumber)
       this.checkDisableButton()
-    } else {
-      return;
+      this.slideToShow(this.$startSliderNumber)
     }
+
   }
 
   onButtonPrevClick() {
-    if (this.$startSliderNumber !== 1) {
+    if (this.$startSliderNumber > 0) {
       this.insertCurrentNumber(--this.$startSliderNumber)
-      this.checkDisableButton()
-    } else {
-      return;
+      this.slideToShow(this.$startSliderNumber)
+    }
+    this.checkDisableButton()
+  }
+
+  slideToShow(slideNumber) {
+    for (let i = 0; i < this.$slide.length; i++) {
+      console.log(i)
+      this.$slide[i].classList.remove('active')
+      if (i === slideNumber) {
+        this.$slide[i].classList.add('active')
+      }
     }
   }
 
